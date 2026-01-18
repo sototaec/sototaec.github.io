@@ -46,9 +46,249 @@
             text-decoration: none;
         }
         
-        .logo-icon {
-            color: var(--primary-blue);
-            font-size: 1.8rem;
+        .logo-img {
+            height: 60px; /* লোগোর সাইজ */
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-input {
+            border-radius: 50px;
+            padding-right: 40px;
+            border: 2px solid #dee2e6;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-blue);
+            box-shadow: none;
+        }
+
+        .search-icon-btn {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+            border: none;
+            background: none;
+        }
+
+        .main-navbar {
+            background-color: var(--primary-blue);
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            padding: 10px 20px !important;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #c90909 100%);
+            color: white;
+            min-height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://placehold.co/1200x600/003399/FFFFFF?text=Akij+Electric+Background');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-custom-red {
+            background-color: var(--primary-red);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+
+        .btn-custom-red:hover {
+            background-color: #d60000;
+            color: white;
+        }
+
+        /* Product Cards */
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-red);
+        }
+
+        .product-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            height: 250px;
+            object-fit: cover;
+            background-color: #f0f0f0;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-green);
+            color: white;
+            font-weight: 600;
+            border: none;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            color: white;
+        }
+
+        /* Dealer Banner */
+        .dealer-banner {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .dealer-icon {
+            font-size: 40px;
+            color: var(--primary-red);
+            background: white;
+            padding: 15px;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #001a4d;
+            color: #ccc;
+        }
+
+        .footer-title {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .sub-footer {
+            background-color: #001233;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .dev-link {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        <!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সততা ইলেকট্রিক কর্নার | Satota Electric Corner</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts for Bengali -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #003399;
+            --primary-red: #FF0000;
+            --whatsapp-green: #25D366;
+            --text-dark: #333333;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+            background-color: var(--bg-light);
+            padding-top: 0; /* Bootstrap often adds padding, resetting if needed */
+        }
+
+        /* --- Custom Overrides & Styles --- */
+        
+        /* Navbar & Top Bar */
+        .top-bar {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo-text {
+            color: var(--primary-red);
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .logo-img {
+            height: 60px; /* লোগোর সাইজ */
+            width: auto;
             margin-right: 10px;
         }
 
@@ -248,8 +488,7 @@
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
+   
         <!-- Top Bar -->
         <div class="top-bar py-3">
             <div class="container">
@@ -257,7 +496,8 @@
                     <!-- Logo -->
                     <div class="col-md-4 col-lg-3 text-center text-md-start">
                         <a href="#" class="logo-text d-inline-flex align-items-center">
-                            <i class="fa-solid fa-bolt logo-icon"></i>
+                            <!-- Logo Image Replaced Here -->
+                            <img src="logo.jpg" alt="Logo" class="logo-img">
                             সততা ইলেকট্রিক কর্নার
                         </a>
                     </div>
